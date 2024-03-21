@@ -8,3 +8,38 @@ body{
     font-family: "Plus Jakarta Sans";
     color: #5e6282; 
 }
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+[class*="__container"]{
+    max-width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+/* Components */
+.header-block {
+}
+.header-block__label {
+    text-transform: uppercase;
+    color: #4475f2;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 18px;
+    line-height: 128%; /* 23/18 */
+}
+.header-block__label:not(:last-child){
+    margin-bottom: 10px;
+}
+.header-block__title {
+    color: #000;
+    font-size: 48px;
+    font-size: 800;
+    line-height: 135%; /* 65/48 */
+}
