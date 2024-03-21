@@ -25,11 +25,11 @@ body{
 }
 /* Components */
 .header-block {
+    font-weight: 800;
 }
 .header-block__label {
     text-transform: uppercase;
     color: #4475f2;
-    font-weight: 800;
     letter-spacing: 2px;
     font-size: 18px;
     line-height: 128%; /* 23/18 */
@@ -40,6 +40,5 @@ body{
 .header-block__title {
     color: #000;
     font-size: 48px;
-    font-size: 800;
     line-height: 135%; /* 65/48 */
 }
