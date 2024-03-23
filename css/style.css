@@ -130,6 +130,13 @@ body{
     color: #fff;
     font-weight: 700;
     line-height: 156.25%; /* 25/16 */
+    position: relative;
+    top: 0;
+    transition: all 0.3s;
+}
+.content-hero__button:hover {
+    top: 3px;
+    box-shadow: 0 30px 60px 0 rgba(68,117,242,0.5);
 }
 .hero__images {
     flex: 0 1 50%;
