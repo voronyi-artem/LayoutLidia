@@ -87,12 +87,36 @@ body{
 /* Hero */
 .hero {
     padding-top: 62px;
+    padding-bottom: 40px;
+    position: relative;
 }
 .hero__container {
     display: flex;
 }
+.hero__container::after,
+.hero__container::before {
+    content: "";
+    position: absolute;
+    background-color: #4475f2;
+    height: 150%;
+    transform-origin: left bottom;
+    box-shadow: 0 30px 60px 0 rgba(71,74,87,0.25);
+    width: 100vw;
+    border-radius: 50px;
+    bottom: 0;
+}
+.hero__container::before {
+    left: calc(50%+30px);
+    transform: skewX(-20deg);
+}
+.hero__container::after{
+    left: calc(50%+444px);
+    transform: skewX(-31deg);
+}
+
 .hero__content {
     flex: 0 1 50%;
+
 }
 .content-hero {
     display: grid;
@@ -142,6 +166,7 @@ body{
     flex: 0 1 50%;
 }
 .images-hero {
+    position: relative;
 }
 .images-hero__item {
 }
