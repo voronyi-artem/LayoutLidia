@@ -53,6 +53,8 @@ body{
     padding-top: 77px;
     /* position: sticky;
     top: 0; */
+    position: relative;
+    z-index: 50;
 }
 .header__container {
     display: flex;
@@ -72,8 +74,20 @@ body{
 .menu__list {
     display: flex;
     align-items: center;
-    gap: 40px;
+    column-gap: 40px;
+    row-gap: 40px;
+    flex-wrap: wrap;
 }
+@media (max-width: 991.98px) {
+    .header__container {
+        gap: 50px;
+    }
+    .menu__list {
+        column-gap: 20px;
+    }
+  
+}
+
 .menu__item {
 }
 .menu__link {
@@ -93,6 +107,13 @@ body{
 .hero__container {
     display: flex;
 }
+@media (max-width: 1200px) {
+    .hero__container {
+        row-gap: 20px;
+       flex-direction: column;
+    }
+    
+}
 .hero__container::before,
 .hero__container::after {
     content: "";
@@ -101,7 +122,7 @@ body{
     height: 150%;
     transform-origin: left bottom;
     box-shadow: 0 30px 60px 0 rgba(71,74,87,0.25);
-    width: 100vw;
+    width: 200vw;
     border-radius: 50px;
     bottom: 0;
 }
@@ -117,14 +138,29 @@ body{
 .hero__content {
     flex: 0 1 50%;
 
+
 }
 .content-hero {
     display: grid;
     align-content: start;
     justify-items: start;
     gap: 30px;
-    padding-right: 20px;
+    position: relative;
+    z-index: 2;
 }
+@media (min-width: 1200px) {
+    .content-hero {
+        padding-right: 20px;
+    }
+    
+}
+@media (min-width: 479.98px) {
+    .content-hero {
+        justify-items: start;
+    }
+    
+}
+
 .content__title {
     font-size: 76px;
     font-weight: 800;
@@ -132,9 +168,20 @@ body{
     line-height: 117.105263%; /* 89/76 */
     letter-spacing: -4px;
 }
+@media (max-width: 991.98px) {
+    .content__title {
+        font-size: 55px;
+    }
+}
+@media (max-width: 479.98px) {
+    .content__title {
+        font-size: 45px;
+    }
+}
 .content__title a{
     color: #4475f2;
     text-decoration: underline;
+    text-shadow: 0 0 8px #fff;
 }
 .content__title a:hover{
     text-decoration: none;
@@ -199,4 +246,9 @@ body{
     
     align-self: end;  
     justify-self: end;
+}
+@media (max-width: 1200px) {
+    .images-hero{
+        align-self: center;
+    }
 }
