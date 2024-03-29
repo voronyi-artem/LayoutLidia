@@ -288,3 +288,16 @@ body{
 	font-weight: 700;
 	font-size: 24px;
 }
+.features__text {
+	line-height: 187.5%; /* 30/16 */
+}
+@media (max-width: 991px) {
+	.features__items {
+		justify-content: center;
+	}
+}
+@media (max-width: 610px) {
+	.features__item {
+		flex-grow: 1;
+	}
+}
